@@ -1,11 +1,13 @@
   
 body {
-    font-family: 'Acme', sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
-
-
 
 
 #left {
     border-right: 4px solid rgb(47, 161, 255);
+}
+
+p {
+    color: red
 }
