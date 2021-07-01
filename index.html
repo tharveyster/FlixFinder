@@ -16,7 +16,7 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-7 bg-danger" id="left">
+            <div class="col-lg-7 bg-danger" id="left-display">
                 <div class="left-contents">
                     <div class="row text-center">
                         <div class="col-2 my-2"></div>
@@ -30,18 +30,39 @@
                     <!-- Flix Search Form -->
                     <form class="mx-5 sidebar-item">
 
-                         <!-- Genre selection -->
-                        <div class="card border-0 mr-2">
-                            <h5 class="card-header bg-white border-bottom" style="text-align:center">
-                                <i class="fas fa-ticket-alt"></i>
-                                Find Flix Genre</h5>
-                            <div class="card-body px-5">
+                        <!-- Genre selection -->
 
-                                <div class="container-fluid">
-                                    <div class="row justify-content-md-center ml-0" id="streaming-services">
-                                    </div>
+
+                        <div class="dropdown">
+                            <label for="genre-input">
+                                <h3><i class="fas fa-ticket-alt"></i> Genre Search</h3>
+                            </label>
+                            <button class="btn btn-primary btn-block mt-3 mb-5 dropdown-toggle" type="button"
+                                id="dropDownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search"></i>
+                                Flix Genres
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropDownButton" id="genre">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Comedy" id="comedy">
+                                    <label class="form-check-label" for="comedy">
+                                        Comedy
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="Horror" id="horror">
+                                    <label class="form-check-label" for="horror">
+                                        Horror
+                                    </label>
                                 </div>
                             </div>
+                        </div>
+                        <h3 class = "text-center"> --OR-- </h3>
+                        <div class="form-row mt-5 ">
+                            <label for="movie-input">
+                                <h3><i class="fas fa-ticket-alt"></i> Movie/TV Search</h3>
+                            </label>
+                            <input type="" class="form-control shadow" id="flix-input" placeholder="Enter Flix Title">
                         </div>
                         <!-- Flix Search Button -->
                         <button type="submit" class="btn btn-primary btn-block mt-4 mb-5" id="submit">
