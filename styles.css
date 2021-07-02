@@ -8,3 +8,13 @@ body {
     border-right: 4px solid rgb(47, 161, 255);
 }
 
+#rotten-tomatoes-img {
+    max-width: 25px;
+}
+
+#imdb-score,
+#rt-aud-score,
+#rt-fresh-score {
+    font-weight: bolder;
+    padding-left: 2px
+}

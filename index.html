@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>FlixFinder</title>
 </head>
 
@@ -79,8 +79,21 @@
 
                         <!-- Movie Info -->
                         <div class="row">
+                                     <!-- Freshness Icon -->
+                                     <div class="p-2 bd-highlight"><img src="rotten-tomatoes.png" alt="Rotten Tomatoes Score" id="rotten-tomatoes-img">
+                                        <span id="rotten-tomatoes-score"></span>
+                                </div>
+                                <div class="p-2 bd-highlight"><img src="imdb.png" alt="IMDB"
+                                    id="imdb-img"><span id="imdb-score"></span></div>
+                        </div>
 
-                            
+  <!-- MOVIE POSTER -->
+  <div class="col-lg-5 col-12">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/51FIcCozbUL._AC_.jpg"
+        class="w-100 img-fluid rounded pr-4" alt="Flix Poster" id="poster">
+</div>
+
+
                             <!-- Movie Details -->
                             <div class="col-lg-9 col-12 ">
                                 <ul class="list-group list-group-flush">
