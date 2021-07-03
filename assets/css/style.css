@@ -12,9 +12,34 @@ h1 {
 
 
 #left-display {
-    border-right: 4px solid rgb(47, 161, 255);
+    border-right: 4px solid black;
 }
+
+
+#right-display {
+    background-image: url("../images/movie-screen.jpg");
+    background-size: cover;
+}
+
 
 #player {
     float: right;
 }
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+
+#rotten-tomatoes-img {
+    max-width: 25px;
+}
+
+#imdb-img {
+    max-width: 45px;
+}
+
+#rotten-tomatoes-img {
+    max-width: 25px;
+}
+
+
