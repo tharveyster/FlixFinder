@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -15,71 +14,160 @@
 
 <body>
     <!--Header-->
-    <h1>Welcome to FlixFinder.com!</h1>
-    
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-7 bg-danger" id="left-display">
-                <div class="left-contents">
-                    <div class="row text-center">
-                        <div class="col-2 my-2"></div>
-                        <div class="col-4 my-4 font-weight-bold">
-                            <p> Find a Flix Genre</p>
+
+    <h1 class="py-3 has-background-black has-text-danger has-text-centered">
+        Welcome to FlixFinder.com!</h1>
+
+    <div class="container.is-fullhd">
+        <div class="columns">
+            <aside class = "left-menu has-background-danger" id="left-display">
+               
+             
+                    <div class="row has-text-centered">
+                        <div class="column is-one-half has-text-weight-bold has-text-black">
+                            <p> Find Your Flix Here!</p>
+
                         </div>
-                        <div class="col-4 my-4 font-weight-bold">
-                            <p> Find a Flix Title </p>
-                        </div>
+
                     </div>
-                    <!-- Flix Search Form -->
-                    <form class="mx-5 sidebar-item">
+            
+                <div class="mx-5 menu">
 
-                        <!-- Genre selection -->
+                    <!-- Genre selection -->
+                    <div class="form-row mt-5">
+                        <label for="genre-input">
+                            <h3 class = "has-text-black"><i class="fas fa-ticket-alt"></i> Flix Genre Search</h3>
+                        </label>
+                        <input class="input" type="text" id="genre-input" placeholder="Enter Flix Genre">
+                    </div>
+                    <!-- Genre Button -->
+                    <button type="submit" class="button is-black" id="submitButton">
+                        <i class="fas fa-search"></i>
+                        Find Flix Genre
+                    </button>
+
+                    <p class="has-text-centered has-text-black"> --OR-- </p>
+                    <div class="form-row mt-5 ">
+                        <label for="flix-input">
+                            <h3 class = "has-text-black"><i class="fas fa-ticket-alt"></i> Flix Title Search</h3>
+                        </label>
+                        <input class="input" type="text" id="title-input" placeholder="Enter Flix Title">
+                    </div>
+                    <!-- Flix Search Button -->
+                    <button type="submit" class="button is-black" id="submitButton">
+                        <i class="fas fa-search"></i>
+                        Find Flix Title
+                    </button>
+                    <img src="popcorn.png" alt="popcorn tub" id="popcorn-img">
+
+             
+            </div>
+            
+            </aside>
+
+            <div class="right-movie-data has-background-danger" id="right-display">
 
 
-                        <div class="dropdown">
-                            <label for="genre-input">
-                                <h3><i class="fas fa-ticket-alt"></i> Genre Search</h3>
-                            </label>
-                            <button class="btn btn-primary btn-block mt-3 mb-5 dropdown-toggle" type="button"
-                                id="dropDownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search"></i>
-                                Flix Genres
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropDownButton" id="genre">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Comedy" id="comedy">
-                                    <label class="form-check-label" for="comedy">
-                                        Comedy
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="Horror" id="horror">
-                                    <label class="form-check-label" for="horror">
-                                        Horror
-                                    </label>
-                                </div>
+                <!-- Movie Info & Trailer Card -->
+                <div class="card has-background-black" id="flix-info">
+                    <h5 class="card-header" id="flix-title"></h5>
+                    <div class="card-body">
+
+                        <!-- Movie Info -->
+                        <div class="row">
+
+                            <!-- Movie Rating -->
+                            <div class="ratings">
+                            <!-- Rotten Tommatoes score -->
+                            <div class="column is-one-fifth">
+                                <img src="rotten-tomatoes.png" alt="Rotten Tomatoes Score" id="rotten-tomatoes-img">
+                                <span id="rotten-tomatoes-score"></span>
+                            </div>
+                            <!-- IMDB Score -->
+                            <div class="column is-one-fifth">
+                                <img src="imdb.png" alt="IMDB Score" id="imdb-img">
+                                <span id="imdb-score"></span>
                             </div>
                         </div>
-                        <h3 class = "text-center"> --OR-- </h3>
-                        <div class="form-row mt-5 ">
-                            <label for="movie-input">
-                                <h3><i class="fas fa-ticket-alt"></i> Movie/TV Search</h3>
-                            </label>
-                            <input type="" class="form-control shadow" id="flix-input" placeholder="Enter Flix Title">
+
+                        <!-- Movie POSTER -->
+                        <div class="poster-trailer">
+                            <div class="column is-one-half">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/51FIcCozbUL._AC_.jpg"
+                                    alt="Flix Poster" id="poster">
+                            </div>
+                            <!-- Movie Trailer -->
+                            <div class="column is-one-half">
+                                <iframe class ="is-outlined" width="580" height="360" src="https://www.youtube.com/embed/CewglxElBK0"
+                                    frameborder="0" allowfullscreen id="player"></iframe>
+                            </div>
                         </div>
-                        <!-- Flix Search Button -->
-                        <button type="submit" class="btn btn-primary btn-block mt-4 mb-5" id="submit">
-                            <i class="fas fa-search"></i>
-                            Find Flix Title
-                        </button>
+
+
+
+                        <!-- Movie Details -->
+                        <div class="column is-one-half">
+                            <ul>
+                                <li>
+                                    <h5>Starring:</h5>
+                                    <h5 id="actors"></h5>
+                                </li>
+                                <li>
+                                    <h5>Director:</h5>
+                                    <h5 id="director"></h5>
+                                </li>
+                                <li>
+                                    <h5>Genre:</h5>
+                                    <h5 id="genre"></h5>
+                                </li>
+                                <li>
+                                    <h5>Rated:</h5>
+                                    <h5 id="rating"></h5>
+                                </li>
+                                <li>
+                                    <h5>Runtime:</h5>
+                                    <h5 id="runtime"></h5>
+                                </li>
+                                <li>
+                                    <h5>Year:</h5>
+                                    <h5 id="year"></h5>
+                                </li>
+                                </li>
+                                <li>
+                                    <h5>Plot:</h5>
+                                    <h5 id="plot">
+                                    </h5>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
+
             </div>
         </div>
 
-        
-            <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-            <div id="player"></div>
-        
+
+    </div>
+
+
+
+
+    </div>
+    </div>
+
+    <footer class="py-3 has-background-black has-text-danger has-text-centered">
+        <small>Copyright &copy; 2021 by Elliott Blue, Troy Bohrer, Todd Harvey, and Cory Piette</small>
+
+    </footer>
+
+
+
+
+    <script src="assets/javascript/app.js"></script>
+
 </body>
-<script src="assets/js/script.js"></script>
+
+
+
 </html>

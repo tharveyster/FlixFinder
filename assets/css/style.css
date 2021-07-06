@@ -3,18 +3,96 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
-h1 {
-    background-color: black;
-    color: red;
-    text-align: center;
-    margin: auto;
-}
+ p {
+  font-size: 30px;
+ }
 
+h1 {
+    margin: auto;
+    font-size: x-large;
+
+}
+h3 {
+    font-size:20px
+}
 
 #left-display {
-    border-right: 4px solid rgb(47, 161, 255);
+    border-right: 4px solid black;
+    border-left: 4px solid black;
 }
+
+
+#right-display {
+    border-left: 4px solid black;
+
+    border-right: 4px solid black;
+}
+
 
 #player {
     float: right;
 }
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+
+#rotten-tomatoes-img {
+    max-width: 45px;
+    margin-top: 5px;
+  
+}
+
+#imdb-img {
+    max-width: 75px;
+    margin-top: 10px
+;
+}
+
+.left-menu {
+ 
+    padding: 20px;
+    clear: both;
+    float: left;
+    width: 30%;
+    height: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.right-movie-data {
+  
+    padding: 20px;
+    clear: both;
+    float: right;
+    width: 70%;
+    height: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: 200;
+ color: white;
+    margin-top: 15px;
+}
+
+#popcorn-img {
+    max-width: 80%;
+    display: block;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.poster-trailer {
+    display:flex;
+    margin-right: 30px;
+    
+}
+
+.ratings {
+    display:flex;
+   
+
+}
+
