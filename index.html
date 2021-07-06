@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
@@ -20,22 +18,21 @@
         Welcome to FlixFinder.com!</h1>
 
     <div class="container.is-fullhd">
-        <div class="row">
-            <div class="column is-two-sixths has-background-danger" id="left-display">
-                <div class="left-data">
+        <div class="columns">
+            <aside class = "left-menu has-background-danger" id="left-display">
+               
+             
                     <div class="row has-text-centered">
                         <div class="column is-one-half has-text-weight-bold">
                             <p> Find Your Flix Here!</p>
                         </div>
 
                     </div>
-                </div>
-
-                <!-- Flix Search Form -->
-                <div class="mx-5 sidebar-item">
+            
+                <div class="mx-5 menu">
 
                     <!-- Genre selection -->
-                    <div class="form-row mt-5 ">
+                    <div class="form-row mt-5">
                         <label for="genre-input">
                             <h3><i class="fas fa-ticket-alt"></i> Flix Genre Search</h3>
                         </label>
@@ -60,79 +57,79 @@
                         Find Flix Title
                     </button>
                     <img src="popcorn.png" alt="popcorn tub" id="popcorn-img">
-                </div>
+
+             
             </div>
+            
+            </aside>
 
-
-
-            <div class="col-lg-7 has-background-danger" id="right-display">
+            <div class="right-movie-data has-background-danger" id="right-display">
 
 
                 <!-- Movie Info & Trailer Card -->
-                <div class="card mt-4" id="flix-info">
+                <div class="card" id="flix-info">
                     <h5 class="card-header" id="flix-title"></h5>
-                    <div class="card-body mr-n3">
+                    <div class="card-body">
 
                         <!-- Movie Info -->
                         <div class="row">
 
                             <!-- Movie Rating -->
-                            <class="col-12">
-                                <div class="d-flex bd-highlight mt-n2">
-
-                                    <!-- Rotten Tommatoes score -->
-                                    <div class="p-3 bd-highlight"><img src="rotten-tomatoes.png"
-                                            alt="Rotten Tomatoes Score" id="rotten-tomatoes-img">
-                                        <span id="rotten-tomatoes-score"></span>
-                                    </div>
-                                    <!-- IMDB Score -->
-                                    <div class="p-3 bd-highlight"><img src="imdb.png" alt="IMDB Score"
-                                            id="imdb-img"><span id="imdb-score"></span></div>
-                                </div>
-
-                                <!-- Movie POSTER -->
-                                <div class="poster-trailer">
-                                    <div class="col-lg-4 col-12">
-                                        <img src="https://images-na.ssl-images-amazon.com/images/I/51FIcCozbUL._AC_.jpg"
-                                            alt="Flix Poster" id="poster">
-                                    </div>
-                                    <!-- Movie Trailer -->
-                                    <iframe width="580" height="360" src="https://www.youtube.com/embed/CewglxElBK0"
-                                        frameborder="0" allowfullscreen id="player"></iframe>
-                                </div>
+                            <!-- Rotten Tommatoes score -->
+                            <div class="column is-one-fifth">
+                                <img src="rotten-tomatoes.png" alt="Rotten Tomatoes Score" id="rotten-tomatoes-img">
+                                <span id="rotten-tomatoes-score"></span>
+                            </div>
+                            <!-- IMDB Score -->
+                            <div c;ass="column is-one-fifth">
+                                <img src="imdb.png" alt="IMDB Score" id="imdb-img"><span id="imdb-score"></span>
+                            </div>
                         </div>
-                        <br>
+
+                        <!-- Movie POSTER -->
+                        <div class="poster-trailer">
+                            <div class="column is-one-half">
+                                <img src="https://images-na.ssl-images-amazon.com/images/I/51FIcCozbUL._AC_.jpg"
+                                    alt="Flix Poster" id="poster">
+                            </div>
+                            <!-- Movie Trailer -->
+                            <div class="column is-one-half">
+                                <iframe width="580" height="360" src="https://www.youtube.com/embed/CewglxElBK0"
+                                    frameborder="0" allowfullscreen id="player"></iframe>
+                            </div>
+                        </div>
+
 
 
                         <!-- Movie Details -->
                         <div class="column is-one-half">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item my-n1">
+                            <ul>
+                                <li>
                                     <h5>Starring:</h5>
                                     <h5 id="actors"></h5>
                                 </li>
-                                <li class="list-group-item my-n1">
+                                <li>
                                     <h5>Director:</h5>
                                     <h5 id="director"></h5>
                                 </li>
-                                <li class="list-group-item my-n1">
+                                <li>
                                     <h5>Genre:</h5>
                                     <h5 id="genre"></h5>
                                 </li>
-                                <li class="list-group-item my-n1">
+                                <li>
                                     <h5>Rated:</h5>
                                     <h5 id="rating"></h5>
                                 </li>
-                                <li class="list-group-item my-n1">
+                                <li>
                                     <h5>Runtime:</h5>
                                     <h5 id="runtime"></h5>
                                 </li>
-                                <li class="list-group-item my-n1">
+                                <li>
                                     <h5>Year:</h5>
                                     <h5 id="year"></h5>
                                 </li>
                                 </li>
-                                <li class="list-group-item my-n1">
+                                <li>
                                     <h5>Plot:</h5>
                                     <h5 id="plot">
                                     </h5>
