@@ -8,8 +8,6 @@ body {
 font-size: 30px;
  }
 h1 {
-    color: red;
-    text-align: center;
     margin: auto;
     font-size: x-large;
 }
@@ -40,12 +38,14 @@ body {
 
 #rotten-tomatoes-img {
     max-width: 45px;
+    margin-top: 5px;
   
 }
 
 #imdb-img {
     max-width: 75px;
-    margin-top: 15px;
+    margin-top: 10px
+;
 }
 
 .left-menu {
@@ -87,4 +87,10 @@ h5 {
     display:flex;
     margin-right: 30px;
     
+}
+
+.ratings {
+    display:flex;
+   
+
 }
