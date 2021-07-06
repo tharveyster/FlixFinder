@@ -37,16 +37,23 @@ body {
 
 
 #rotten-tomatoes-img {
-    max-width: 25px;
+    max-width: 45px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+ 
 }
 
 #imdb-img {
-    max-width: 45px;
+    max-width: 75px;
+    display: block;
+    margin-left: 50px;
+    margin-right: auto;
+margin-top: 5px;
 }
 
-#rotten-tomatoes-img {
-    max-width: 25px;
-}
+
+
 
 h5 {
     font-size: 17px;
