@@ -7,13 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="styles.css">
     <title>FlixFinder</title>
 </head>
 
 <body>
+    <!--Header-->
+    <h1>Welcome to FlixFinder.com!</h1>
+    
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-7 bg-danger" id="left-display">
@@ -57,21 +61,93 @@
                                 </div>
                             </div>
                         </div>
-                        <h3 class = "text-center"> --OR-- </h3>
+                        <h3 class="text-center"> --OR-- </h3>
                         <div class="form-row mt-5 ">
                             <label for="movie-input">
-                                <h3><i class="fas fa-ticket-alt"></i> Movie/TV Search</h3>
+                                <h3><i class="fas fa-ticket-alt"></i> Flix Title Search</h3>
                             </label>
                             <input type="" class="form-control shadow" id="flix-input" placeholder="Enter Flix Title">
                         </div>
                         <!-- Flix Search Button -->
-                        <button type="submit" class="btn btn-primary btn-block mt-4 mb-5" id="submit">
+                        <button type="submit" class="btn btn-primary btn-block mt-4 mb-5" id="submitButton">
                             <i class="fas fa-search"></i>
                             Find Flix Title
                         </button>
                 </div>
-            </div>
-        </div>
+
+                <!-- Movie Info & Trailer Card -->
+                <div class="card mt-1" id="flix-info">
+                    <h5 class="card-header" id="flix-title"></h5>
+                    <div class="card-body mr-n3">
+
+                        <!-- Movie Info -->
+                        <div class="row">
+                                     <!-- Freshness Icon -->
+                                     <div class="p-2 bd-highlight"><img src="rotten-tomatoes.png" alt="Rotten Tomatoes Score" id="rotten-tomatoes-img">
+                                        <span id="rotten-tomatoes-score"></span>
+                                </div>
+                                <div class="p-2 bd-highlight"><img src="imdb.png" alt="IMDB Score"
+                                    id="imdb-img"><span id="imdb-score"></span></div>
+                        </div>
+
+  <!-- MOVIE POSTER -->
+  <div class="col-lg-5 col-12">
+    <img src="https://images-na.ssl-images-amazon.com/images/I/51FIcCozbUL._AC_.jpg"
+        class="w-100 img-fluid rounded pr-4" alt="Flix Poster" id="poster">
+</div>
+
+
+                            <!-- Movie Details -->
+                            <div class="col-lg-9 col-12 ">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item my-n1">    
+                                        <h6>Starring:</h6>
+                                        <h6 id="actors"></h6>
+                                    </li>
+                                    <li class="list-group-item my-n1">
+                                        <h6>Director:</h6>
+                                        <h6 id="director"></h6>
+                                    </li>
+                                    <li class="list-group-item my-n1">
+                                        <h6>Genre:</h6>
+                                        <h6 id="genre2"></h6>
+                                    </li>
+                                    <li class="list-group-item my-n1">
+                                        <h6>Rated:</h6>
+                                        <h6 id="rating"></h6>
+                                    </li>
+                                    <li class="list-group-item my-n1">
+                                        <h6>Runtime:</h6>
+                                        <h6 id="runtime"></h6>
+                                    </li>
+                                    <li class="list-group-item my-n1">
+                                        <h6>Year:</h6>
+                                        <h6 id="year"></h6>
+                                    </li>
+                                    </li>
+                                    <li class="list-group-item my-n1">
+                                        <h6>Plot:</h6>
+                                        <h6 id="plot">
+
+                                        </h6>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+</body>
+
+        
+            <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+            <div id="player"></div>
+    <script>
+
+    
+    </script>
 </body>
 
 </html>
