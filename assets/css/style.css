@@ -8,12 +8,14 @@ body {
 font-size: 30px;
  }
 h1 {
-    background-color: black;
     color: red;
     text-align: center;
     margin: auto;
+    font-size: x-large;
 }
-
+h3 {
+    font-size:20px
+}
 
 #left-display {
     border-right: 4px solid black;
@@ -23,7 +25,7 @@ h1 {
 
 #right-display {
     border-left: 4px solid black;
-    background-size: cover;
+
     border-right: 4px solid black;
 }
 
@@ -68,4 +70,9 @@ h5 {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+.poster-trailer {
+    display:flex;
+    margin-right: 30px;
+    
 }
