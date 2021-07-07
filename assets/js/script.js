@@ -75,7 +75,7 @@ async function getSearchResults() {
   flixSearchParr = flixInfoApi + 'plot=full&t=' + flixTitleVal
   var response = await fetch(flixSearchParr);
   var data = await response.json();
-  var { Title, Actors, Director, Genre, Rated, Runtime, Year, Plot, Ratings, imdbRating } = data;
+  var { Title, Actors, Director, Genre, Rated, Runtime, Year, Plot, Ratings, imdbRating, Poster } = data;
 
   document.getElementById("flix-title").textContent = Title;
   document.getElementById("actors").textContent = Actors;
@@ -87,6 +87,8 @@ async function getSearchResults() {
   document.getElementById("plot").textContent = Plot;
   document.getElementById("rotten-tomatoes-score").textContent = Ratings[1].Value;
   document.getElementById("imdb-score").textContent = imdbRating;
+  document.getElementById('poster').setAttribute('src',Poster);
+
 
 }
 
