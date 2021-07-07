@@ -10,13 +10,13 @@ fetch(ombdApi)
     console.log(data);
   });
 
-flixBtn.addEventListener('click', function (event) {
-  event.preventDefault();
+//flixBtn.addEventListener('click', function (event) {
+ // event.preventDefault();
 
   if (flixSelect === null) {
     console.log("Invalid response");
   }
-})
+
 
 // Youtube video code  
 
@@ -67,20 +67,20 @@ function stopVideo() {
 
 var flixTitleInput = document.getElementById('flix-input');
 
-var flixTitleVal = document.getElementById('flix-input').value;
+//var flixTitleVal = document.getElementById('flix-input').value;
 
 var flixSearchBtn = document.getElementById("submitButton")
 
 var genreSelect = document.getElementById("dropDownButton")
 
-var selectedGenre = document.getElementById("dropDownButton").value;
+//var selectedGenre = document.getElementById("dropDownButton").value;
 
 
 var flixPosterApi = 'http://img.omdbapi.com/?apikey=d8cda59d'
 
 var flixInfoApi = 'http://www.omdbapi.com/?apikey=d8cda59d&t=caddyshack'
 
-var flixSearchParr = flixInfoApi + 'plot=full&t=' + flixTitleVal
+//var flixSearchParr = flixInfoApi + 'plot=full&t=' + flixTitleVal
 
 
 

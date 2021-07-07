@@ -70,9 +70,10 @@ body {
 }
 
 h5 {
+    display:inline-block;
     font-size: 20px;
     font-weight: 200;
- color: white;
+ color:white;
     margin-top: 15px;
 }
 
