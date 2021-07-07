@@ -73,11 +73,11 @@ var flixSearchParr;
 
 async function getSearchResults() {
   flixSearchParr = flixInfoApi + 'plot=full&t=' + flixTitleVal
-
   var response = await fetch(flixSearchParr);
   var data = await response.json();
-  var { Actors, Director, Genre, Rated, Runtime, Year, Plot, Ratings, imdbRating } = data;
+  var { Title, Actors, Director, Genre, Rated, Runtime, Year, Plot, Ratings, imdbRating } = data;
 
+  document.getElementById("flix-title").textContent = Title;
   document.getElementById("actors").textContent = Actors;
   document.getElementById("director").textContent = Director;
   document.getElementById("genre2").textContent = Genre;
