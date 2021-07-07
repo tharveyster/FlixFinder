@@ -1,4 +1,5 @@
 
+
 // Youtube video code  
 
 // 2. This code loads the IFrame Player API code asynchronously.
@@ -48,20 +49,26 @@ function stopVideo() {
 
 var flixTitleInput = document.getElementById('title-input');
 
+
 var flixTitleVal = document.getElementById('title-input').value;
+
+
+
 
 var flixSearchBtn = document.getElementById("submitButton")
 
 var genreSelect = document.querySelector(".button")
 
+
 var selectedGenre = document.querySelector(".button").value;
+
 
 
 var flixPosterApi = 'http://img.omdbapi.com/?apikey=d8cda59d'
 
 var flixInfoApi = 'http://www.omdbapi.com/?apikey=d8cda59d&t=caddyshack'
 
-var flixSearchParr = flixInfoApi + 'plot=full&t=' + flixTitleVal
+//var flixSearchParr = flixInfoApi + 'plot=full&t=' + flixTitleVal
 
 
 
