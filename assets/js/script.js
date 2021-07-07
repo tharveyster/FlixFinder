@@ -1,21 +1,3 @@
-var flixSelect = document.getElementById('flix-input');
-var flixBtn = document.getElementById('submit');
-var ombdApi = 'http://www.omdbapi.com/?i=tt3896198&apikey=d8cda59d&s='
-
-fetch(ombdApi)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-  });
-
-//flixBtn.addEventListener('click', function (event) {
- // event.preventDefault();
-
-  if (flixSelect === null) {
-    console.log("Invalid response");
-  }
 
 
 // Youtube video code  
@@ -65,15 +47,21 @@ function stopVideo() {
 }
 
 
-var flixTitleInput = document.getElementById('flix-input');
+var flixTitleInput = document.getElementById('title-input');
 
-//var flixTitleVal = document.getElementById('flix-input').value;
+
+var flixTitleVal = document.getElementById('title-input').value;
+
+
+
 
 var flixSearchBtn = document.getElementById("submitButton")
 
-var genreSelect = document.getElementById("dropDownButton")
+var genreSelect = document.querySelector(".button")
 
-//var selectedGenre = document.getElementById("dropDownButton").value;
+
+var selectedGenre = document.querySelector(".button").value;
+
 
 
 var flixPosterApi = 'http://img.omdbapi.com/?apikey=d8cda59d'
@@ -98,7 +86,12 @@ async function getSearchResults() {
   document.getElementById("year").textContent = Year;
   document.getElementById("plot").textContent = Plot;
 
+  console.log
 
 }
 
-getSearchResults();
+flixSearchBtn.addEventListener('click', function() {
+
+  getSearchResults()
+
+});
