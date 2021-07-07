@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>FlixFinder</title>
 </head>
 
@@ -34,17 +34,47 @@
                 <div class="mx-5 menu">
 
                     <!-- Genre selection -->
-                    <div class="form-row mt-5">
-                        <label for="genre-input">
-                            <h3 class = "has-text-black"><i class="fas fa-ticket-alt"></i> Flix Genre Search</h3>
-                        </label>
-                        <input class="input" type="text" id="genre-input" placeholder="Enter Flix Genre">
-                    </div>
-                    <!-- Genre Button -->
-                    <button type="submit" class="button is-black" id="submitButton">
-                        <i class="fas fa-search"></i>
-                        Find Flix Genre
-                    </button>
+                    <label for="flix-input">
+                        <h3 class = "has-text-black"><i class="fas fa-ticket-alt"></i> Flix Genre Search</h3>
+                    </labe>
+                    <div class="dropdown">
+                        <div class="dropdown-trigger">
+                          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
+                            <span>Select a Genre</span>
+                            <span class="icon is-small">
+                              <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                          </button>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu3" role="menu">
+                          <div class="dropdown-content">
+                            <a href="#" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#" class="dropdown-item">
+                              Comedy
+                            </a>
+                            <a href="#" class="dropdown-item">
+                              Drama
+                            </a>
+                            <a href="#" class="dropdown-item">
+                              Fantasy
+                            </a>
+                            <a href="#" class="dropdown-item">
+                              Horror
+                            </a>
+                            <a href="#" class="dropdown-item">
+                              Mystery
+                            </a>
+                            <a href="#" class="dropdown-item">
+                              Romance
+                            </a>
+                            <a href="#" class="dropdown-item">
+                              Thriller
+                            </a>
+                          </div>
+                        </div>
+                      </div>
 
                     <p class="has-text-centered has-text-black"> --OR-- </p>
                     <div class="form-row mt-5 ">
@@ -103,8 +133,6 @@
                             </div>
                         </div>
 
-
-
                         <!-- Movie Details -->
                         <div class="column is-one-half">
                             <ul>
@@ -118,7 +146,7 @@
                                 </li>
                                 <li>
                                     <h5>Genre:</h5>
-                                    <h5 id="genre"></h5>
+                                    <h5 id="genre2"></h5>
                                 </li>
                                 <li>
                                     <h5>Rated:</h5>
