@@ -50,7 +50,7 @@ function stopVideo() {
 var flixTitleInput = document.getElementById('title-input');
 
 
-var flixTitleVal = document.getElementById('title-input').value;
+var flixTitleVal;
 
 
 
@@ -66,17 +66,17 @@ var selectedGenre = document.querySelector(".button").value;
 
 var flixPosterApi = 'http://img.omdbapi.com/?apikey=d8cda59d'
 
-var flixInfoApi = 'http://www.omdbapi.com/?apikey=d8cda59d&t=caddyshack'
+var flixInfoApi = 'http://www.omdbapi.com/?apikey=d8cda59d&'
 
-//var flixSearchParr = flixInfoApi + 'plot=full&t=' + flixTitleVal
-
+var flixSearchParr;
 
 
 async function getSearchResults() {
+  flixSearchParr = flixInfoApi + 'plot=full&t=' + flixTitleVal
 
-  var response = await fetch(flixInfoApi);
+  var response = await fetch(flixSearchParr);
   var data = await response.json();
-  var { Actors, Director, Genre, Rated, Runtime, Year, Plot } = data;
+  var { Actors, Director, Genre, Rated, Runtime, Year, Plot, Ratings, imdbRating } = data;
 
   document.getElementById("actors").textContent = Actors;
   document.getElementById("director").textContent = Director;
@@ -85,13 +85,15 @@ async function getSearchResults() {
   document.getElementById("runtime").textContent = Runtime;
   document.getElementById("year").textContent = Year;
   document.getElementById("plot").textContent = Plot;
-
-  console.log
+  document.getElementById("rotten-tomatoes-score").textContent = Ratings[1].Value;
+  document.getElementById("imdb-score").textContent = imdbRating;
 
 }
 
 flixSearchBtn.addEventListener('click', function() {
-
-  getSearchResults()
+  flixTitleVal = document.getElementById('title-input').value;
+  flixTitleVal = flixTitleVal.replace(/ /gi, "%20");
+  getSearchResults();
+  
 
 });
