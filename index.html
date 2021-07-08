@@ -33,50 +33,6 @@
             
                 <div class="mx-5 menu">
 
-                    <!-- Genre selection -->
-                    <label for="flix-input">
-                        <h3 class = "has-text-black"><i class="fas fa-ticket-alt"></i> Flix Genre Search</h3>
-                    </labe>
-                    <div class="dropdown">
-                        <div class="dropdown-trigger">
-                          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu3">
-                            <span>Select a Genre</span>
-                            <span class="icon is-small">
-                              <i class="fas fa-angle-down" aria-hidden="true"></i>
-                            </span>
-                          </button>
-                        </div>
-                        <div class="dropdown-menu" id="dropdown-menu3" role="menu">
-                          <div class="dropdown-content">
-                            <a href="#" class="dropdown-item">
-                              Action
-                            </a>
-                            <a href="#" class="dropdown-item">
-                              Comedy
-                            </a>
-                            <a href="#" class="dropdown-item">
-                              Drama
-                            </a>
-                            <a href="#" class="dropdown-item">
-                              Fantasy
-                            </a>
-                            <a href="#" class="dropdown-item">
-                              Horror
-                            </a>
-                            <a href="#" class="dropdown-item">
-                              Mystery
-                            </a>
-                            <a href="#" class="dropdown-item">
-                              Romance
-                            </a>
-                            <a href="#" class="dropdown-item">
-                              Thriller
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-
-                    <p class="has-text-centered has-text-black"> --OR-- </p>
                     <div class="form-row mt-5 ">
                         <label for="flix-input">
                             <h3 class = "has-text-black"><i class="fas fa-ticket-alt"></i> Flix Title Search</h3>
@@ -134,7 +90,7 @@
                         </div>
 
                         <!-- Movie Details -->
-                        <div class="column is-one-half">
+                        <div class="column is-fullhd">
                             <ul>
                                 <li>
                                     <h5 class = "has-text-danger">Starring:</h5>
@@ -161,10 +117,11 @@
                                     <h5 id="year"></h5>
                                 </li>
                                 </li>
-                                <li>
-                                    <h5 class = "has-text-danger">Plot:</h5>
-                                    <h5 id="plot">
-                                    </h5>
+                                <li class = "columns">
+                                 
+                                    <h5 class = "plot-fix has-text-danger">Plot:</h5>
+                                    <h5 id="plot"></h5>
+                              
                                 </li>
                             </ul>
                         </div>
