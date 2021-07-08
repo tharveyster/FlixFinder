@@ -78,7 +78,7 @@ var genreSelect = document.getElementById("dropDownButton")
 
 var flixPosterApi = 'http://img.omdbapi.com/?apikey=d8cda59d'
 
-var flixInfoApi = 'http://www.omdbapi.com/?apikey=d8cda59d&t=caddyshack'
+var flixInfoApi = 'http://www.omdbapi.com/?apikey=d8cda59d&t=avengers:endgame   '
 
 //var flixSearchParr = flixInfoApi + 'plot=full&t=' + flixTitleVal
 

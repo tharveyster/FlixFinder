@@ -97,3 +97,28 @@ h5 {
 
 }
 
+
+
+  
+    
+
+#plot {
+    margin-top: 25px;
+    margin-left: 10px;
+    clear: both;
+    float: right;
+    width: 97%;
+    height: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-right: 10px;
+}
+.plot-fix {
+ 
+margin-top: 25px;
+margin-left: 12px;
+    clear: both;
+    float: left;
+    width: 3%;
+    height: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
