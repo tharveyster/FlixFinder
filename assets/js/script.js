@@ -1,5 +1,4 @@
 
-
 // Youtube video code  
 
 // 2. This code loads the IFrame Player API code asynchronously.
@@ -46,32 +45,14 @@ function stopVideo() {
   player.stopVideo();
 }
 
-
 var flixTitleInput = document.getElementById('title-input');
-
-
 var flixTitleVal;
-
-
-
-
 var flixSearchBtn = document.getElementById("submitButton")
-
 var genreSelect = document.querySelector(".button")
-
-
 var selectedGenre = document.querySelector(".button").value;
-
-
-
-
 var flixPosterApi = 'http://img.omdbapi.com/?apikey=d8cda59d'
-
-
 var flixInfoApi = 'http://www.omdbapi.com/?apikey=d8cda59d&'
-
 var flixSearchParr;
-
 
 async function getSearchResults() {
   flixSearchParr = flixInfoApi + 'plot=full&t=' + flixTitleVal
@@ -87,17 +68,13 @@ async function getSearchResults() {
   document.getElementById("runtime").textContent = Runtime;
   document.getElementById("year").textContent = Year;
   document.getElementById("plot").textContent = Plot;
-  document.getElementById("rotten-tomatoes-score").textContent = Ratings[1].Value;
+  document.getElementById("rotten-tomatoes-score").textContent = Ratings[1].Value || '';
   document.getElementById("imdb-score").textContent = imdbRating;
   document.getElementById('poster').setAttribute('src',Poster);
-
-
 }
 
 flixSearchBtn.addEventListener('click', function() {
   flixTitleVal = document.getElementById('title-input').value;
-  flixTitleVal = flixTitleVal.replace(/ /gi, "%20");
+  window.encodeURIComponent(flixTitleVal);
   getSearchResults();
-  
-
 });
