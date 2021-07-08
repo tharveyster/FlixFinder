@@ -1,21 +1,3 @@
-var flixSelect = document.getElementById('flix-input');
-var flixBtn = document.getElementById('submit');
-var ombdApi = 'http://www.omdbapi.com/?i=tt3896198&apikey=d8cda59d&s='
-
-fetch(ombdApi)
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    console.log(data);
-  });
-
-//flixBtn.addEventListener('click', function (event) {
- // event.preventDefault();
-
-  if (flixSelect === null) {
-    console.log("Invalid response");
-  }
 
 
 // Youtube video code  
@@ -65,31 +47,39 @@ function stopVideo() {
 }
 
 
-var flixTitleInput = document.getElementById('flix-input');
+var flixTitleInput = document.getElementById('title-input');
 
-//var flixTitleVal = document.getElementById('flix-input').value;
+
+var flixTitleVal;
+
+
+
 
 var flixSearchBtn = document.getElementById("submitButton")
 
-var genreSelect = document.getElementById("dropDownButton")
+var genreSelect = document.querySelector(".button")
 
-//var selectedGenre = document.getElementById("dropDownButton").value;
+
+var selectedGenre = document.querySelector(".button").value;
+
+
 
 
 var flixPosterApi = 'http://img.omdbapi.com/?apikey=d8cda59d'
 
-var flixInfoApi = 'http://www.omdbapi.com/?apikey=d8cda59d&t=avengers:endgame   '
 
-//var flixSearchParr = flixInfoApi + 'plot=full&t=' + flixTitleVal
+var flixInfoApi = 'http://www.omdbapi.com/?apikey=d8cda59d&'
 
+var flixSearchParr;
 
 
 async function getSearchResults() {
-
-  var response = await fetch(flixInfoApi);
+  flixSearchParr = flixInfoApi + 'plot=full&t=' + flixTitleVal
+  var response = await fetch(flixSearchParr);
   var data = await response.json();
-  var { Actors, Director, Genre, Rated, Runtime, Year, Plot } = data;
+  var { Title, Actors, Director, Genre, Rated, Runtime, Year, Plot, Ratings, imdbRating, Poster } = data;
 
+  document.getElementById("flix-title").textContent = Title;
   document.getElementById("actors").textContent = Actors;
   document.getElementById("director").textContent = Director;
   document.getElementById("genre2").textContent = Genre;
@@ -97,8 +87,17 @@ async function getSearchResults() {
   document.getElementById("runtime").textContent = Runtime;
   document.getElementById("year").textContent = Year;
   document.getElementById("plot").textContent = Plot;
+  document.getElementById("rotten-tomatoes-score").textContent = Ratings[1].Value;
+  document.getElementById("imdb-score").textContent = imdbRating;
+  document.getElementById('poster').setAttribute('src',Poster);
 
 
 }
 
-getSearchResults();
+flixSearchBtn.addEventListener('click', function() {
+  flixTitleVal = document.getElementById('title-input').value;
+  flixTitleVal = flixTitleVal.replace(/ /gi, "%20");
+  getSearchResults();
+  
+
+});
