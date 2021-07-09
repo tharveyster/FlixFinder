@@ -15,132 +15,147 @@
 <body>
     <!--Header-->
 
-    <h1 class="py-3 has-background-black has-text-danger has-text-centered">
+    <h1 class="py-4 has-background-black has-text-danger has-text-centered">
         Welcome to FlixFinder.com!</h1>
 
     <div class="container.is-fullhd">
         <div class="columns">
-            <aside class = "left-menu has-background-danger" id="left-display">
-               
-             
-                    <div class="row has-text-centered">
-                        <div class="column is-one-half has-text-weight-bold has-text-black">
-                            <p> Find Your Flix Here!</p>
+            <aside class="left-menu has-background-danger" id="left-display">
 
-                        </div>
+
+                <div class="row has-text-centered">
+                    <div class="column is-one-half has-text-weight-bold has-text-danger">
+                        <p> Find Your Flix Here!</p>
 
                     </div>
-            
+
+                </div>
+
                 <div class="mx-5 menu">
 
                     <div class="form-row mt-5 ">
                         <label for="flix-input">
-                            <h3 class = "has-text-black"><i class="fas fa-ticket-alt"></i> Flix Title Search</h3>
+                            <h3 class="has-text-black"><i class="fas fa-ticket-alt"></i> Flix Title Search</h3>
                         </label>
                         <input class="input" type="text" id="title-input" placeholder="Enter Flix Title">
                     </div>
                     <!-- Flix Search Button -->
-                    <button type="submit" class="button is-black" id="submitButton">
+                    <button type="submit" class="button is-danger" id="submitButton">
                         <i class="fas fa-search"></i>
                         Find Flix Title
                     </button>
-                    <img src="popcorn.png" alt="popcorn tub" id="popcorn-img">
-                    
-                    <!-- Similar Flix Section -->
-                    <div id="recommendedFlix">
 
-                    </div>
 
-             
+
                 </div>
-            
+
             </aside>
 
             <div class="right-movie-data has-background-danger" id="right-display">
 
+                <!-- Intro card -->
+                
+                <div class="card-intro columns">
+                    <div class class="poprcorn-glasses column is-one-fifth">
+                        <img src="popcorn.jpg" alt="popcorn" id="popcorn">
+                        <br>
+                        <img src="glasses.jpg" alt="glasses" id="glasses">
+                    </div>
+                    <div class="flixfinder-logo column is-three-fifth">
+                        <img src="flixfinder.png" alt="flixfinder logo" id="flix-finder-logo">
+                    </div>
+                    <div class="drink column is-one-fifth">
+                        <img src="drink.jpg" alt="drink" id="drink">
+                        <img src="projector.png" alt="projector" id="projector">
+                    </div>
+                </div>
+
 
                 <!-- Movie Info & Trailer Card -->
-                <div class="card has-background-black" id="flix-info">
-                    <h5 class="card-header" id="flix-title"></h5>
-                    <div class="card-body">
+              <div class="hide">
+                    <div class="card has-background-black" id="flix-info">
+                        <h5 class="card-header" id="flix-title"></h5>
+                        <div class="card-body">
 
-                        <!-- Movie Info -->
-                        <div class="row">
+                            <!-- Movie Info -->
+                            <div class="row">
 
-                            <!-- Movie Rating -->
-                            <div class="ratings">
-                            <!-- Rotten Tommatoes score -->
-                            <div class="ratings-format column is-one-fifth has-text-white">
-                                <img src="rotten-tomatoes.png" alt="Rotten Tomatoes Score" id="rotten-tomatoes-img">
-                                <span id="rotten-tomatoes-score"></span>
+                                <!-- Movie Rating -->
+                                <div class="ratings">
+                                    <!-- Rotten Tommatoes score -->
+                                    <div class="ratings-format column is-one-fifth has-text-white">
+                                        <img src="rotten-tomatoes.png" alt="Rotten Tomatoes Score"
+                                            id="rotten-tomatoes-img">
+                                        <span id="rotten-tomatoes-score"></span>
+                                    </div>
+                                    <!-- IMDB Score -->
+                                    <div class="ratings-format column is-one-fifth has-text-white">
+                                        <img src="imdb.png" alt="IMDB Score" id="imdb-img">
+                                        <span id="imdb-score"></span>
+                                    </div>
+                                </div>
+
+                                <!-- Movie POSTER -->
+                                <div class="poster-trailer">
+                                    <div class="column is-one-half">
+                                        <img src="https://images-na.ssl-images-amazon.com/images/I/51FIcCozbUL._AC_.jpg"
+                                            alt="Flix Poster" id="poster">
+                                    </div>
+                                    <!-- Movie Trailer -->
+                                    <div class="column is-one-half">
+                                        <iframe id="trailer" class="is-outlined" width="580" height="360"
+                                            src="https://www.youtube.com/embed/CewglxElBK0" frameborder="0"
+                                            allowfullscreen id="player"></iframe>
+                                    </div>
+                                </div>
+
+                                <!-- Movie Details -->
+                                <div class="column is-fullhd">
+                                    <ul>
+                                        <li>
+                                            <h5 class="has-text-danger">Starring:</h5>
+                                            <h5 id="actors"></h5>
+                                        </li>
+                                        <li>
+                                            <h5 class="has-text-danger">Director:</h5>
+                                            <h5 id="director"></h5>
+                                        </li>
+                                        <li>
+                                            <h5 class="has-text-danger">Genre: </h5>
+                                            <h5 id="genre2"></h5>
+                                        </li>
+                                        <li>
+                                            <h5 class="has-text-danger">Rated:</h5>
+                                            <h5 id="rating"></h5>
+                                        </li>
+                                        <li>
+                                            <h5 class="has-text-danger">Runtime:</h5>
+                                            <h5 id="runtime"></h5>
+                                        </li>
+                                        <li>
+                                            <h5 class="has-text-danger">Year:</h5>
+                                            <h5 id="year"></h5>
+                                        </li>
+                                        </li>
+                                        <li class="columns">
+
+                                            <h5 class="plot-fix has-text-danger">Plot:</h5>
+                                            <h5 id="plot"></h5>
+
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            <!-- IMDB Score -->
-                            <div class="ratings-format column is-one-fifth has-text-white">
-                                <img src="imdb.png" alt="IMDB Score" id="imdb-img">
-                                <span id="imdb-score"></span>
-                            </div>
+
                         </div>
 
-                        <!-- Movie POSTER -->
-                        <div class="poster-trailer">
-                            <div class="column is-one-half">
-                                <img src="https://images-na.ssl-images-amazon.com/images/I/51FIcCozbUL._AC_.jpg"
-                                    alt="Flix Poster" id="poster">
-                            </div>
-                            <!-- Movie Trailer -->
-                            <div class="column is-one-half">
-                                <iframe id="trailer" class ="is-outlined" width="580" height="360" src="https://www.youtube.com/embed/CewglxElBK0"
-                                    frameborder="0" allowfullscreen id="player"></iframe>
-                            </div>
-                        </div>
-
-                        <!-- Movie Details -->
-                        <div class="column is-fullhd">
-                            <ul>
-                                <li>
-                                    <h5 class = "has-text-danger">Starring:</h5>
-                                    <h5 id="actors"></h5>
-                                </li>
-                                <li>
-                                    <h5 class = "has-text-danger">Director:</h5>
-                                    <h5 id="director"></h5>
-                                </li>
-                                <li>
-                                    <h5 class = "has-text-danger">Genre: </h5>
-                                    <h5 id="genre2"></h5>
-                                </li>
-                                <li>
-                                    <h5 class = "has-text-danger">Rated:</h5>
-                                    <h5 id="rating"></h5>
-                                </li>
-                                <li>
-                                    <h5 class = "has-text-danger">Runtime:</h5>
-                                    <h5 id="runtime"></h5>
-                                </li>
-                                <li>
-                                    <h5 class = "has-text-danger">Year:</h5>
-                                    <h5 id="year"></h5>
-                                </li>
-                                </li>
-                                <li class = "columns">
-                                 
-                                    <h5 class = "plot-fix has-text-danger">Plot:</h5>
-                                    <h5 id="plot"></h5>
-                              
-                                </li>
-                            </ul>
-                        </div>
                     </div>
 
                 </div>
 
             </div>
+
         </div>
-
-
-    </div>
-
-    </div>
     </div>
 
     <footer class="py-3 has-background-black has-text-danger has-text-centered">
@@ -154,4 +169,5 @@
     <script src="assets/js/script.js"></script>
 
 </body>
+
 </html>

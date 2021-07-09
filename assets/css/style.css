@@ -59,6 +59,8 @@ body {
     width: 30%;
     height: auto;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url("https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/00/a0000430/img/basic/a0000430_main.jpg?20170429124716&q=80&rw=750&rh=536");
+   background-size: cover;
 }
 
 .right-movie-data {
@@ -78,6 +80,34 @@ h5 {
     margin-top: 15px;
 }
 
+#popcorn {
+width: 175px;
+height:225px;
+margin-top: 10px;
+margin-left: 15px;
+}
+
+#drink {
+    width: 150px;
+    height:200px;
+    margin-top: 5px;
+    margin-right: 10px;  
+    }
+    
+#glasses {
+    width: 125px;
+    height:175px;
+    margin-left: 50px;
+    margin-top: 190px;
+  
+}
+
+#projector {
+    width: 150px;
+    height:225px;
+    margin-right: 50px;
+    margin-top: 170px;
+}
 h6 {
     font-size: 20px;
     font-weight: 200;
@@ -93,6 +123,7 @@ h6 {
     margin-right: auto;
     text-align: center;
 }
+
 .poster-trailer {
     display:flex;
     margin-right: 30px; 
@@ -157,6 +188,37 @@ h6 {
     margin: 10px;
 
 }
+#flix-finder-logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 75px;
+    margin-bottom: 75px;
+    box-shadow:
+    0 0 0 5px hsl(0, 0%, 0%),
+    0 0 0 10px hsl(348,100%,61%),
+    0 0 0 15px hsl(0, 0%, 0%),
+    0 0 0 20px hsl(348,100%,61%),
+    0 0 0 25px hsl(0, 0%, 0%),
+    0 0 0 30px hsl(348,100%,61%),
+    0 0 0 35px hsl(0, 0%, 0%),
+    0 0 0 40px hsl(348,100%,61%),
+    0 0 0 45px hsl(0, 0%, 0%);
+
+    width: 75%;
+
+}
+
+.card {
+    margin-right: 6px;
+
+}
+
+
+  .card-intro {
+      margin-right: 7px;
+     
+  }
 
 #recommendedFlix {
     text-align: center;
