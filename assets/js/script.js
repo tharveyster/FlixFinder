@@ -50,7 +50,14 @@ var flixTitleVal;
 var flixSearchBtn = document.getElementById("submitButton")
 var genreSelect = document.querySelector(".button")
 var selectedGenre = document.querySelector(".button").value;
+
+
+
+
+
+
 var flixPosterApi = 'http://img.omdbapi.com/?apikey=d8cda59d'
+
 var flixInfoApi = 'http://www.omdbapi.com/?apikey=d8cda59d&'
 var flixSearchParr;
 
