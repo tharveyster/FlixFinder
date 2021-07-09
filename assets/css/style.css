@@ -78,6 +78,13 @@ h5 {
     margin-top: 15px;
 }
 
+h6 {
+    font-size: 20px;
+    font-weight: 200;
+    color: white;
+    margin-top: 15px;
+}
+
 #popcorn-img {
     max-width: 80%;
     display: block;
@@ -140,7 +147,7 @@ h5 {
 
 .hide {
     display: none;
-
+}
 
 #submitButton {
     margin: 10px;
@@ -149,4 +156,14 @@ h5 {
 #title-input {
     margin: 10px;
 
+}
+
+#recommendedFlix {
+    text-align: center;
+}
+
+.simFlixTitle {
+    color: black;
+    margin-top: 40px;
+    text-decoration: underline;
 }

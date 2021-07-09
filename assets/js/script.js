@@ -51,15 +51,10 @@ var flixSearchBtn = document.getElementById("submitButton")
 var genreSelect = document.querySelector(".button")
 var selectedGenre = document.querySelector(".button").value;
 
-
-
-
-
-
 var flixPosterApi = 'http://img.omdbapi.com/?apikey=d8cda59d'
-
 var flixInfoApi = 'http://www.omdbapi.com/?apikey=d8cda59d&'
 var flixSearchParr;
+var imdbId;
 
 async function getSearchResults() {
   flixSearchParr = flixInfoApi + 'plot=full&t=' + flixTitleVal
@@ -78,19 +73,44 @@ async function getSearchResults() {
   document.getElementById("rotten-tomatoes-score").textContent = Ratings[1].Value || '';
   document.getElementById("imdb-score").textContent = imdbRating;
   document.getElementById('poster').setAttribute('src',Poster);
+  imdbId = data.imdbID;
+  getRecommendations();
 }
 
 async function getTrailer() {
   var trailerApi = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=';
   var trailerApiKey= ' trailer&key= AIzaSyCOS_weDpnl3iKcueqHEqF-ug255aj6x_4';
 
-  trailerUrl = trailerApi + flixTitleVal + trailerApiKey;
+  var trailerUrl = trailerApi + flixTitleVal + trailerApiKey;
   var response = await fetch(trailerUrl);
   var data = await response.json();
   var trailer = data.items[0].id.videoId;
   var youtubeUrl = "https://www.youtube.com/embed/" + trailer;
-  console.log(youtubeUrl);
   document.getElementById("trailer").setAttribute('src',youtubeUrl);
+}
+
+async function getRecommendations() {
+  var tmdbUrl = 'https://api.themoviedb.org/3/movie/';
+  var tmdbApiKey = '/similar?api_key=80f80a0f6ffe632acbbd9becc8c87009&language=en-US&page=1';
+  var tmdbApiUrl = tmdbUrl + imdbId + tmdbApiKey;
+  var response = await fetch(tmdbApiUrl);
+  var data = await response.json();
+  console.log(data);
+  var similarFlix = [];
+  var recommendedFlix = document.querySelector('#recommendedFlix');
+  recommendedFlix.textContent = '';
+  var similarFlixTitle = document.createElement('h3');
+  similarFlixTitle.classList.add("simFlixTitle");
+  similarFlixTitle.textContent = "Similar Flix";
+  recommendedFlix.append(similarFlixTitle);
+  for (var i = 0; i < 3; i++) {
+    similarFlix[i] = data.results[i].original_title;
+    console.log(similarFlix[i]);
+    var similarFlixList = document.createElement('h6');
+    similarFlixList.textContent = similarFlix[i];
+    recommendedFlix.append(similarFlixList);
+  }
+
 }
 
 flixSearchBtn.addEventListener('click', function() {
