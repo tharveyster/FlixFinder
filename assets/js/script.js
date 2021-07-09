@@ -46,7 +46,7 @@ function stopVideo() {
 }*/
 
 var flixTitleInput = document.getElementById('title-input');
-var flixTitleVal;
+var flixTitleVal = "step brothers";
 var flixSearchBtn = document.getElementById("submitButton")
 var genreSelect = document.querySelector(".button")
 var selectedGenre = document.querySelector(".button").value;
@@ -55,6 +55,7 @@ var flixPosterApi = 'https://img.omdbapi.com/?apikey=d8cda59d'
 var flixInfoApi = 'https://www.omdbapi.com/?apikey=d8cda59d&'
 var flixSearchParr;
 var imdbId;
+getSearchResults();
 
 async function getSearchResults() {
   flixSearchParr = flixInfoApi + 'plot=full&t=' + flixTitleVal
