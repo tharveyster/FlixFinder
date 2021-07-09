@@ -1,5 +1,4 @@
-
-
+/*
 // Youtube video code  
 
 // 2. This code loads the IFrame Player API code asynchronously.
@@ -44,32 +43,23 @@ function onPlayerStateChange(event) {
 }
 function stopVideo() {
   player.stopVideo();
-}
-
+}*/
 
 var flixTitleInput = document.getElementById('title-input');
-
-
 var flixTitleVal;
-
-
-
-
 var flixSearchBtn = document.getElementById("submitButton")
-
 var genreSelect = document.querySelector(".button")
-
-
 var selectedGenre = document.querySelector(".button").value;
 
 
 
 
 
+
+var flixPosterApi = 'http://img.omdbapi.com/?apikey=d8cda59d'
+
 var flixInfoApi = 'http://www.omdbapi.com/?apikey=d8cda59d&'
-
 var flixSearchParr;
-
 
 async function getSearchResults() {
   flixSearchParr = flixInfoApi + 'plot=full&t=' + flixTitleVal
@@ -85,17 +75,27 @@ async function getSearchResults() {
   document.getElementById("runtime").textContent = Runtime;
   document.getElementById("year").textContent = Year;
   document.getElementById("plot").textContent = Plot;
-  document.getElementById("rotten-tomatoes-score").textContent = Ratings[1].Value;
+  document.getElementById("rotten-tomatoes-score").textContent = Ratings[1].Value || '';
   document.getElementById("imdb-score").textContent = imdbRating;
   document.getElementById('poster').setAttribute('src',Poster);
+}
 
+async function getTrailer() {
+  var trailerApi = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=';
+  var trailerApiKey= ' trailer&key= AIzaSyCOS_weDpnl3iKcueqHEqF-ug255aj6x_4';
 
+  trailerUrl = trailerApi + flixTitleVal + trailerApiKey;
+  var response = await fetch(trailerUrl);
+  var data = await response.json();
+  var trailer = data.items[0].id.videoId;
+  var youtubeUrl = "https://www.youtube.com/embed/" + trailer;
+  console.log(youtubeUrl);
+  document.getElementById("trailer").setAttribute('src',youtubeUrl);
 }
 
 flixSearchBtn.addEventListener('click', function() {
   flixTitleVal = document.getElementById('title-input').value;
-  flixTitleVal = flixTitleVal.replace(/ /gi, "%20");
+  window.encodeURIComponent(flixTitleVal);
   getSearchResults();
-  
-
+  getTrailer();
 });
