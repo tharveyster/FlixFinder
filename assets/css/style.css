@@ -108,6 +108,21 @@ margin-left: 15px;
     margin-right: 50px;
     margin-top: 170px;
 }
+h6 {
+    font-size: 20px;
+    font-weight: 200;
+    color: white;
+    margin-top: 15px;
+}
+
+#popcorn-img {
+    max-width: 80%;
+    display: block;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 
 .poster-trailer {
     display:flex;
@@ -204,3 +219,13 @@ margin-left: 15px;
       margin-right: 7px;
      
   }
+
+#recommendedFlix {
+    text-align: center;
+}
+
+.simFlixTitle {
+    color: black;
+    margin-top: 40px;
+    text-decoration: underline;
+}
