@@ -40,13 +40,15 @@ body {
 #rotten-tomatoes-img {
     max-width: 45px;
     margin-top: 5px;
+    margin-right: 3px;
   
 }
 
 #imdb-img {
     max-width: 75px;
-    margin-top: 10px
-;
+    margin-top: 10px;
+    margin-right: 7px;
+
 }
 
 .left-menu {
@@ -93,14 +95,11 @@ h5 {
 
 .ratings {
     display:flex;
+    justify-content: center;
    
 
 }
-
-
-
-  
-    
+ 
 
 #plot {
     margin-top: 25px;
@@ -121,4 +120,31 @@ margin-left: 12px;
     width: 3%;
     height: auto;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.ratings-format {
+   font-size: 25px;
+   justify-content: center;
+   display: flex;
+}
+#rotten-tomatoes-score{
+  margin-top: 13px;  
+}
+#imdb-score{
+    margin-top: 13px;  
+  }
+   
+ 
+
+#flix-title {
+    text-align: center;
+    font-size: 35pt;
+   
+  
+}
+.card-header {
+    justify-content: center;
+}
+
+.hide {
+    display: none;
 }

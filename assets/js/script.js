@@ -64,7 +64,7 @@ var selectedGenre = document.querySelector(".button").value;
 
 
 
-var flixInfoApi = 'http://www.omdbapi.com/?apikey=d8cda59d&t=avengers:endgame   '
+
 
 var flixInfoApi = 'http://www.omdbapi.com/?apikey=d8cda59d&'
 
