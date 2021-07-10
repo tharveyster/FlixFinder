@@ -39,8 +39,6 @@ async function getSearchResults() {
   movieEl.style.display = "block";
   searchHistory.push(flixTitleVal);
   localStorage.setItem("search",JSON.stringify(searchHistory));
-  console.log(localStorage);
-  console.log(searchHistory);
 }
 
 // Get a trailer clip of the searched item from the YOUTUBE API
@@ -74,7 +72,7 @@ async function getRecommendations() {
     for (var i = 0; i < 3; i++) {
       similarFlix[i] = data.results[i].original_title;
       var similarFlixList = document.createElement('h6');
-      similarFlixList.textContent = similarFlix[i];
+      similarFlixList.textContent = similarFlix[i].toUpperCase();
       recommendedFlix.append(similarFlixList);
     }
   } else {
@@ -91,7 +89,6 @@ async function getRecommendations() {
 }
 
 function getSearchHistory() {
-  console.log(searchHistory);
   searchHistoryEl.textContent = '';
   var searchHistoryTitle = document.createElement('h3');
   searchHistoryTitle.classList.add("simFlixTitle");
@@ -100,7 +97,7 @@ function getSearchHistory() {
   searchHistoryEl.append(searchHistoryTitle);
   for (var i = 0; i < searchHistory.length; i++) {
     var searchHistoryList = document.createElement('h6');
-    searchHistoryList.textContent = searchHistory[i];
+    searchHistoryList.textContent = searchHistory[i].toUpperCase();
     searchHistoryEl.append(searchHistoryList);
   }
 }

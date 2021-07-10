@@ -236,6 +236,10 @@ h6 {
     text-decoration: underline;
 }
 
+#searchHistory {
+    text-align: center;
+}
+
 /*adjusts trailer screen size */
 @media screen and (max-width: 1300px) {
     #trailer {
