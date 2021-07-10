@@ -55,7 +55,8 @@ var flixPosterApi = 'https://img.omdbapi.com/?apikey=d8cda59d'
 var flixInfoApi = 'https://www.omdbapi.com/?apikey=d8cda59d&'
 var flixSearchParr;
 var imdbId;
-getSearchResults();
+var introEl = document.querySelector(".card-intro");
+var movieEl = document.querySelector(".hide");
 
 async function getSearchResults() {
   flixSearchParr = flixInfoApi + 'plot=full&t=' + flixTitleVal
@@ -71,11 +72,17 @@ async function getSearchResults() {
   document.getElementById("runtime").textContent = Runtime;
   document.getElementById("year").textContent = Year;
   document.getElementById("plot").textContent = Plot;
-  document.getElementById("rotten-tomatoes-score").textContent = Ratings[1].Value || '';
+  if (Ratings[1]) {
+    document.getElementById("rotten-tomatoes-score").textContent = Ratings[1].Value;
+  } else {
+    document.getElementById("rotten-tomatoes-score").textContent = '';
+  }
   document.getElementById("imdb-score").textContent = imdbRating;
   document.getElementById('poster').setAttribute('src',Poster);
   imdbId = data.imdbID;
   getRecommendations();
+  introEl.style.display = "none";
+  movieEl.style.display = "block";
 }
 
 async function getTrailer() {
@@ -98,10 +105,11 @@ async function getRecommendations() {
   var data = await response.json();
   console.log(data);
   var similarFlix = [];
-  var recommendedFlix = document.querySelector('#recommendedFlix');
+  var recommendedFlix = document.querySelector('#similarFlix');
   recommendedFlix.textContent = '';
   var similarFlixTitle = document.createElement('h3');
   similarFlixTitle.classList.add("simFlixTitle");
+  similarFlixTitle.classList.add("has-text-danger");
   similarFlixTitle.textContent = "Similar Flix";
   recommendedFlix.append(similarFlixTitle);
   for (var i = 0; i < 3; i++) {
@@ -116,7 +124,12 @@ async function getRecommendations() {
 
 flixSearchBtn.addEventListener('click', function() {
   flixTitleVal = document.getElementById('title-input').value;
+  if (flixTitleVal === '') {
+    alert('You must enter a movie title');
+    return;
+  }
   window.encodeURIComponent(flixTitleVal);
   getSearchResults();
   getTrailer();
+  flixTitleInput.value = '';
 });
