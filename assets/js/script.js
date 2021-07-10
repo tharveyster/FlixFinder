@@ -10,6 +10,7 @@ var imdbId;
 var introEl = document.querySelector(".card-intro");
 var movieEl = document.querySelector(".hide");
 var searchHistory = JSON.parse(localStorage.getItem("search")) || [];
+var searchHistoryEl = document.querySelector("#searchHistory");
 
 // Search the OMDB API for an item that matches the search term
 async function getSearchResults() {
@@ -89,6 +90,21 @@ async function getRecommendations() {
   }
 }
 
+function getSearchHistory() {
+  console.log(searchHistory);
+  searchHistoryEl.textContent = '';
+  var searchHistoryTitle = document.createElement('h3');
+  searchHistoryTitle.classList.add("simFlixTitle");
+  searchHistoryTitle.classList.add("has-text-danger");
+  searchHistoryTitle.textContent = "Search History";
+  searchHistoryEl.append(searchHistoryTitle);
+  for (var i = 0; i < searchHistory.length; i++) {
+    var searchHistoryList = document.createElement('h6');
+    searchHistoryList.textContent = searchHistory[i];
+    searchHistoryEl.append(searchHistoryList);
+  }
+}
+
 // Event listener for search button
 flixSearchBtn.addEventListener('click', function() {
   flixTitleVal = document.getElementById('title-input').value;
@@ -100,4 +116,5 @@ flixSearchBtn.addEventListener('click', function() {
   getSearchResults();
   getTrailer();
   flixTitleInput.value = '';
+  getSearchHistory();
 });
