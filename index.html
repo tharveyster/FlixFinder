@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
@@ -14,52 +15,44 @@
 
 <body>
     <!--Header-->
-
     <h1 class="py-4 has-background-black has-text-danger has-text-centered">
         Welcome to FlixFinder.com!</h1>
-
     <div class="container.is-fullhd">
         <div class="columns">
+
+            <!--Formats left-side menu with title input search-->
             <aside class="left-menu has-background-danger" id="left-display">
-
-
                 <div class="row has-text-centered">
                     <div class="column is-one-half has-text-weight-bold has-text-danger">
                         <p> Find Your Flix Here!</p>
-
                     </div>
-
                 </div>
-
                 <div class="mx-5 menu">
-
                     <div class="form-row mt-5 ">
                         <label for="flix-input">
                             <h3 class="has-text-black"><i class="fas fa-ticket-alt"></i> Flix Title Search</h3>
                         </label>
                         <input class="input" type="text" id="title-input" placeholder="Enter Flix Title">
                     </div>
+
                     <!-- Flix Search Button -->
                     <button type="submit" class="button is-danger" id="submitButton">
                         <i class="fas fa-search"></i>
                         Find Flix Title
                     </button>
 
-                    <!-- Similar Flix -->
+                    <!-- Lists of similar Flix based on genre  -->
                     <div id="similarFlix"></div>
 
-                    <div id="searchHistory"></div>
-
-
+                    <div id = "searchHistory"></div>
 
                 </div>
-
             </aside>
 
+            <!--Formats right-hand side with intro card or movie info-->
             <div class="right-movie-data has-background-danger" id="right-display">
 
-                <!-- Intro card -->
-                
+                <!-- Intro card is displayed when first visitng page and after a page refresh-->
                 <div class="card-intro columns">
                     <div class class="poprcorn-glasses column is-one-fifth">
                         <img src="popcorn.jpg" alt="popcorn" id="popcorn">
@@ -75,9 +68,8 @@
                     </div>
                 </div>
 
-
-                <!-- Movie Info & Trailer Card -->
-              <div class="hide">
+                <!-- Movie Info & Trailer Card displayed after title input-->
+                <div class="hide">
                     <div class="card has-background-black" id="flix-info">
                         <h5 class="card-header" id="flix-title"></h5>
                         <div class="card-body">
@@ -87,12 +79,14 @@
 
                                 <!-- Movie Rating -->
                                 <div class="ratings">
+
                                     <!-- Rotten Tommatoes score -->
                                     <div class="ratings-format column is-one-fifth has-text-white">
                                         <img src="rotten-tomatoes.png" alt="Rotten Tomatoes Score"
                                             id="rotten-tomatoes-img">
                                         <span id="rotten-tomatoes-score"></span>
                                     </div>
+
                                     <!-- IMDB Score -->
                                     <div class="ratings-format column is-one-fifth has-text-white">
                                         <img src="imdb.png" alt="IMDB Score" id="imdb-img">
@@ -103,13 +97,14 @@
                                 <!-- Movie POSTER -->
                                 <div class="poster-trailer">
                                     <div class="column is-one-half">
-                                        <img src="https://images-na.ssl-images-amazon.com/images/I/51FIcCozbUL._AC_.jpg"
+                                        <img src=""
                                             alt="Flix Poster" id="poster">
                                     </div>
+
                                     <!-- Movie Trailer -->
                                     <div class="column is-one-half">
                                         <iframe id="trailer" class="is-outlined" width="580" height="360"
-                                            src="https://www.youtube.com/embed/CewglxElBK0" frameborder="0"
+                                            src="" frameborder="0"
                                             allowfullscreen id="player"></iframe>
                                     </div>
                                 </div>
@@ -151,25 +146,18 @@
                                     </ul>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
     </div>
 
+    <!--footer formatting and information-->
     <footer class="py-3 has-background-black has-text-danger has-text-centered">
         <small>Copyright &copy; 2021 by Elliott Blue, Troy Bohrer, Todd Harvey, and Cory Piette</small>
 
     </footer>
-
-
-
 
     <script src="assets/js/script.js"></script>
 

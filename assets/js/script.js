@@ -45,7 +45,7 @@ async function getSearchResults() {
 // Get a trailer clip of the searched item from the YOUTUBE API
 async function getTrailer() {
   var trailerApi = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=';
-  var trailerApiKey= ' trailer&key=AIzaSyA6arsyQ3x1bHTwPi6zovNf2UMhMje22ew';
+  var trailerApiKey= ' trailer&key=AIzaSyA6arsyQ3x1bHTwPi6zovNf2UMhMje22ew'
   var trailerUrl = trailerApi + flixTitleVal + trailerApiKey;
   var response = await fetch(trailerUrl);
   var data = await response.json();
