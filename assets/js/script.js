@@ -102,21 +102,33 @@ async function getRecommendations() {
   var tmdbApiKey = '/similar?api_key=80f80a0f6ffe632acbbd9becc8c87009&language=en-US&page=1';
   var tmdbApiUrl = tmdbUrl + imdbId + tmdbApiKey;
   var response = await fetch(tmdbApiUrl);
-  var data = await response.json();
-  console.log(data);
-  var similarFlix = [];
   var recommendedFlix = document.querySelector('#similarFlix');
-  recommendedFlix.textContent = '';
-  var similarFlixTitle = document.createElement('h3');
-  similarFlixTitle.classList.add("simFlixTitle");
-  similarFlixTitle.classList.add("has-text-danger");
-  similarFlixTitle.textContent = "Similar Flix";
-  recommendedFlix.append(similarFlixTitle);
-  for (var i = 0; i < 3; i++) {
-    similarFlix[i] = data.results[i].original_title;
-    console.log(similarFlix[i]);
+  if (response.ok) {
+    var data = await response.json();
+    console.log(data);
+    var similarFlix = [];
+    recommendedFlix.textContent = '';
+    var similarFlixTitle = document.createElement('h3');
+    similarFlixTitle.classList.add("simFlixTitle");
+    similarFlixTitle.classList.add("has-text-danger");
+    similarFlixTitle.textContent = "Similar Flix";
+    recommendedFlix.append(similarFlixTitle);
+    for (var i = 0; i < 3; i++) {
+      similarFlix[i] = data.results[i].original_title;
+      console.log(similarFlix[i]);
+      var similarFlixList = document.createElement('h6');
+      similarFlixList.textContent = similarFlix[i];
+      recommendedFlix.append(similarFlixList);
+    }
+  } else {
+    recommendedFlix.textContent = '';
+    var similarFlixTitle = document.createElement('h3');
+    similarFlixTitle.classList.add("simFlixTitle");
+    similarFlixTitle.classList.add("has-text-danger");
+    similarFlixTitle.textContent = "Similar Flix";
+    recommendedFlix.append(similarFlixTitle);
     var similarFlixList = document.createElement('h6');
-    similarFlixList.textContent = similarFlix[i];
+    similarFlixList.textContent = "No similar Flix found!"
     recommendedFlix.append(similarFlixList);
   }
 
