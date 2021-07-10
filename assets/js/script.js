@@ -87,7 +87,7 @@ async function getSearchResults() {
 
 async function getTrailer() {
   var trailerApi = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=';
-  var trailerApiKey= ' trailer&key= AIzaSyCOS_weDpnl3iKcueqHEqF-ug255aj6x_4';
+  var trailerApiKey= ' trailer&key= AIzaSyA6arsyQ3x1bHTwPi6zovNf2UMhMje22ew';
 
   var trailerUrl = trailerApi + flixTitleVal + trailerApiKey;
   var response = await fetch(trailerUrl);
