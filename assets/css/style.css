@@ -235,3 +235,43 @@ h6 {
     margin-top: 40px;
     text-decoration: underline;
 }
+
+/*adjusts trailer screen size */
+@media screen and (max-width: 1300px) {
+    #trailer {
+        width: 500px;
+        height: 300px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    #trailer {
+        width: 450px;
+        height: 250px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    #trailer {
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #trailer {
+        width: 350px;
+        height: 250px;
+    }
+}
+@media screen and (max-width: 900px) {
+    #trailer {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #trailer {
+        width: 250px;
+        height: 150px;
+    }
+}
