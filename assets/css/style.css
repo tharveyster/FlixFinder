@@ -220,12 +220,11 @@ h6 {
      
   }
 
-#recommendedFlix {
+#similarFlix {
     text-align: center;
 }
 
 .simFlixTitle {
-    color: black;
     margin-top: 40px;
     text-decoration: underline;
 }
