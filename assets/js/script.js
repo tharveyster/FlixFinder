@@ -99,7 +99,7 @@ function getSearchHistory() {
   searchHistoryTitle.classList.add("has-text-danger");
   searchHistoryTitle.textContent = "Search History";
   searchHistoryEl.append(searchHistoryTitle);
-  for (var i = 4; i < searchHistory.length; i--) {
+  for (var i = 0; i < searchHistory.length; i++) {
     var searchHistoryList = document.createElement('h6');
     searchHistoryList.textContent = searchHistory[i].toUpperCase();
     searchHistoryEl.append(searchHistoryList);
