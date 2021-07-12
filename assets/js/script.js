@@ -37,14 +37,18 @@ async function getSearchResults() {
   getRecommendations();
   introEl.style.display = "none";
   movieEl.style.display = "block";
+  if (searchHistory.length === 5) {
+    searchHistory.shift();
+  }
   searchHistory.push(flixTitleVal);
   localStorage.setItem("search",JSON.stringify(searchHistory));
+  getSearchHistory();
 }
 
 // Get a trailer clip of the searched item from the YOUTUBE API
 async function getTrailer() {
   var trailerApi = 'https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=';
-  var trailerApiKey= ' trailer&key=AIzaSyA6arsyQ3x1bHTwPi6zovNf2UMhMje22ew'
+  var trailerApiKey= ' trailer&key=AIzaSyAVo5crd8w8kPuBz_Sq_ebY9N9JoogNUOM'
   var trailerUrl = trailerApi + flixTitleVal + trailerApiKey;
   var response = await fetch(trailerUrl);
   var data = await response.json();
@@ -95,7 +99,7 @@ function getSearchHistory() {
   searchHistoryTitle.classList.add("has-text-danger");
   searchHistoryTitle.textContent = "Search History";
   searchHistoryEl.append(searchHistoryTitle);
-  for (var i = 0; i < searchHistory.length; i++) {
+  for (var i = 4; i < searchHistory.length; i--) {
     var searchHistoryList = document.createElement('h6');
     searchHistoryList.textContent = searchHistory[i].toUpperCase();
     searchHistoryEl.append(searchHistoryList);
@@ -113,5 +117,4 @@ flixSearchBtn.addEventListener('click', function() {
   getSearchResults();
   getTrailer();
   flixTitleInput.value = '';
-  getSearchHistory();
 });
