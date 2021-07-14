@@ -1,4 +1,4 @@
-# Project-1
+# FlixFinder
 
 Welcome to FlixFinder!
 
