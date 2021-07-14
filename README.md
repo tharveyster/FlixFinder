@@ -11,7 +11,7 @@ If you've already seen that movie but are interested in something similar, you'l
 If you want to revisit a movie you've aleady searched but don't remeber the exact title, don't worry, your last 5 title searches are saved for your convenience!
 
 ## Project Link
-The project can be viewed at <https://troybohrer8.github.io/Project-1/>.
+The project can be viewed at <https://tharveyster.github.io/FlixFinder/>.
 
 ## Screenshot
 ![The FlixFinder page searches for movie info based upon input supplied by the user.](./assets/images/flixfinder-demo.png)
