@@ -21,8 +21,11 @@ The project can be viewed at <https://tharveyster.github.io/FlixFinder/>.
 
 ## Collaborators
 Troy Bohrer - GitHub: <https://github.com/TroyBohrer8/>
+
 Cory Piette - GitHub: <https://github.com/coryjpiette/>
+
 Todd Harvey - GitHub: <https://github.com/tharveyster/>
+
 Elliott Blue - GitHub: <https://github.com/25blocEL/>
 
 ## License
