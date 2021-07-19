@@ -10,12 +10,20 @@ If you've already seen that movie but are interested in something similar, you'l
 
 If you want to revisit a movie you've aleady searched but don't remeber the exact title, don't worry, your last 5 title searches are saved for your convenience!
 
+## Tech Used
+HTML, CSS, JavaScript, OMDB API for movie information, Google Youtube API for movie trailers, and TMDB API for similar movie titles.
 
 ## Project Link
 The project can be viewed at <https://tharveyster.github.io/FlixFinder/>.
 
 ## Screenshot
 ![The FlixFinder page searches for movie info based upon input supplied by the user.](./assets/images/flixfinder-demo.png)
+
+## Collaborators
+Troy Bohrer - GitHub: <https://github.com/TroyBohrer8/>
+Cory Piette - GitHub: <https://github.com/coryjpiette/>
+Todd Harvey - GitHub: <https://github.com/tharveyster/>
+Elliott Blue - GitHub: <https://github.com/25blocEL/>
 
 ## License
 Copyright 2021 Troy Bohrer, Cory Piette, Todd Harvey, and Elliott Blue
