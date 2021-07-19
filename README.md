@@ -16,8 +16,10 @@ HTML, CSS, JavaScript, OMDB API for movie information, Google Youtube API for mo
 ## Project Link
 The project can be viewed at <https://tharveyster.github.io/FlixFinder/>.
 
-## Screenshot
+## Screenshots
+![The FlixFinder page searches for movie info based upon input supplied by the user.](./assets/images/flixfinder-demo2.png)
 ![The FlixFinder page searches for movie info based upon input supplied by the user.](./assets/images/flixfinder-demo.png)
+![The FlixFinder page searches for movie info based upon input supplied by the user.](./assets/images/flixfinder-demo3.png)
 
 ## Collaborators
 Troy Bohrer - GitHub: <https://github.com/TroyBohrer8/>
