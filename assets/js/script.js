@@ -9,7 +9,7 @@ var flixSearchParr;
 var imdbId;
 var introEl = document.querySelector(".card-intro");
 var movieEl = document.querySelector(".hide");
-var searchHistory = JSON.parse(localStorage.getItem("search")) || [];
+var searchHistory = JSON.parse(localStorage.getItem("flixSearch")) || [];
 var searchHistoryEl = document.querySelector("#searchHistory");
 
 // Search the OMDB API for an item that matches the search term
@@ -41,7 +41,7 @@ async function getSearchResults() {
     searchHistory.shift();
   }
   searchHistory.push(flixTitleVal);
-  localStorage.setItem("search",JSON.stringify(searchHistory));
+  localStorage.setItem("flixSearch",JSON.stringify(searchHistory));
   getSearchHistory();
 }
 
